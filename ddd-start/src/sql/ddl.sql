@@ -1,10 +1,10 @@
 create database shop character set utf8mb4 collate utf8mb4_general_ci;
 
-CREATE USER 'shopuser'@'localhost' IDENTIFIED BY 'shoppass';
-CREATE USER 'shopuser'@'%' IDENTIFIED BY 'shoppass';
+CREATE USER 'user'@'localhost' IDENTIFIED BY '1234';
+CREATE USER 'user'@'%' IDENTIFIED BY '1234';
 
-GRANT ALL PRIVILEGES ON shop.* TO 'shopuser'@'localhost';
-GRANT ALL PRIVILEGES ON shop.* TO 'shopuser'@'%';
+GRANT ALL PRIVILEGES ON shop.* TO 'user'@'localhost' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON *.* TO 'user'@'localhost' WITH GRANT OPTION;
 
 use shop;
 
